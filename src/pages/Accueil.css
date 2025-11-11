@@ -105,6 +105,65 @@
   flex-wrap: wrap;
 }
 
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: 500px;
+    background-attachment: scroll; /* Désactiver fixed sur mobile pour de meilleures performances */
+    padding: 20px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+  }
+
+  .hero-buttons {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 450px;
+    padding: 15px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin: 0 auto 25px;
+    padding: 0 15px;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+}
+
 /* About Section */
 .about-section {
   background: linear-gradient(to bottom, #FFFBF5, #FFF9F0);
@@ -272,28 +331,59 @@
   background: white;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    height: 500px;
-  }
-
-  .hero-title {
+/* Responsive - Tablette et Mobile */
+@media (max-width: 968px) {
+  .section-title {
     font-size: 2rem;
   }
 
-  .hero-subtitle {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .mission-card {
+    padding: 30px 20px;
+  }
+
+  .mission-icon {
+    font-size: 3rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-content p {
     font-size: 1.1rem;
   }
+}
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
   }
 
-  .hero-buttons .btn {
-    width: 100%;
-    max-width: 300px;
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mission-card {
+    padding: 25px 20px;
+  }
+
+  .mission-icon {
+    font-size: 2.5rem;
+  }
+
+  .activity-icon {
+    font-size: 2rem;
   }
 
   .cta-content h2 {
@@ -302,5 +392,56 @@
 
   .cta-content p {
     font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .mission-card {
+    padding: 20px 15px;
+  }
+
+  .mission-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .mission-card p {
+    font-size: 0.9rem;
+  }
+
+  .activity-item h4 {
+    font-size: 1rem;
+  }
+
+  .activity-item p {
+    font-size: 0.85rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 0.95rem;
   }
 }
