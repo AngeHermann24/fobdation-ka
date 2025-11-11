@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaEnvelope, FaCheckCircle } from 'react-icons/fa';
 import './Fondation.css';
 
@@ -118,7 +119,7 @@ const Fondation = () => {
             </div>
           </div>
           <div className="gallery-link">
-            <a href="/galerie" className="btn btn-primary">Voir plus</a>
+            <Link to="/galerie" className="btn btn-primary">Voir plus</Link>
           </div>
         </div>
       </section>

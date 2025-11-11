@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaHeart, FaGraduationCap, FaTheaterMasks, FaHandsHelping, FaBullhorn, FaUsers } from 'react-icons/fa';
 import './NosActions.css';
 
@@ -167,8 +168,8 @@ const NosActions = () => {
             <h2>Participez à nos actions</h2>
             <p>Votre soutien peut changer des vies. Rejoignez-nous dans notre mission.</p>
             <div className="cta-buttons">
-              <a href="/don" className="btn btn-primary">Faire un don</a>
-              <a href="/contact" className="btn btn-secondary">Nous contacter</a>
+              <Link to="/don" className="btn btn-primary">Faire un don</Link>
+              <Link to="/contact" className="btn btn-secondary">Nous contacter</Link>
             </div>
           </div>
         </div>
