@@ -1,0 +1,396 @@
+.festitoh-header {
+  background: linear-gradient(135deg, rgba(123, 46, 143, 0.9), rgba(225, 33, 71, 0.85)),
+              url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1600') center/cover;
+}
+
+.festitoh-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.festitoh-logo {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  animation: fadeInScale 0.8s ease-out, pulse3D 3s ease-in-out infinite;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.festitoh-logo:hover {
+  animation-play-state: paused;
+  transform: scale(1.1) rotateY(10deg);
+  filter: drop-shadow(0 10px 30px rgba(123, 46, 143, 0.5));
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse3D {
+  0%, 100% {
+    transform: scale(1) translateZ(0);
+  }
+  50% {
+    transform: scale(1.05) translateZ(20px);
+  }
+}
+
+/* Présentation Section */
+.presentation-section {
+  background-color: white;
+}
+
+.presentation-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.lead-text strong {
+  color: var(--primary-color);
+}
+
+/* Historique Section */
+.historique-section {
+  background-color: var(--bg-gray);
+}
+
+.historique-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.historique-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.historique-content strong {
+  color: var(--secondary-color);
+}
+
+/* Origines Section */
+.origines-section {
+  background-color: white;
+}
+
+.origines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.origine-card {
+  background: linear-gradient(135deg, var(--accent-violet), var(--accent-red));
+  color: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.origine-card h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.origine-card p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.origines-details {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--bg-gray);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.origines-details ul {
+  list-style: none;
+}
+
+.origines-details li {
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  position: relative;
+  padding-left: 30px;
+}
+
+.origines-details li:last-child {
+  border-bottom: none;
+}
+
+.origines-details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Contexte Section */
+.contexte-section {
+  background-color: var(--bg-gray);
+}
+
+.activites-festival {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.activite-festival-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.activite-festival-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(123, 46, 143, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+.activite-festival-card:hover {
+  transform: translateY(-15px) rotateX(5deg) scale(1.03);
+  box-shadow: 0 25px 50px rgba(123, 46, 143, 0.3), 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.activite-festival-card:hover::before {
+  left: 100%;
+}
+
+.activite-icon {
+  font-size: 3rem;
+  color: var(--accent-violet);
+  margin-bottom: 20px;
+}
+
+.activite-festival-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.activite-festival-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Objectifs Section */
+.objectifs-section {
+  background-color: white;
+}
+
+.objectif-principal {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  background: linear-gradient(135deg, var(--accent-violet), var(--primary-color));
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.objectif-principal h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.objectif-principal p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.objectifs-specifiques h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+
+.objectif-card {
+  background: var(--bg-gray);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.objectif-card:hover {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(10px);
+}
+
+.objectif-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.objectif-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* Biographie Section */
+.biographie-section {
+  background-color: var(--bg-gray);
+}
+
+.biographie-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bio-header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.bio-header h3 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.bio-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.bio-text {
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.bio-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.bio-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.bio-highlight-item {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.bio-highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bio-highlight-item h4 {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.bio-highlight-item p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .festitoh-logo {
+    height: 120px;
+  }
+
+  .lead-text {
+    font-size: 1.1rem;
+  }
+
+  .historique-content {
+    padding: 25px;
+  }
+
+  .origines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .objectif-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-header h3 {
+    font-size: 2rem;
+  }
+
+  .bio-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .festitoh-logo {
+    height: 100px;
+  }
+}

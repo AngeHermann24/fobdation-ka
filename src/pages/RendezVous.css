@@ -1,0 +1,232 @@
+.rdv-header {
+  background: linear-gradient(135deg, rgba(26, 42, 116, 0.9), rgba(45, 168, 218, 0.85)),
+              url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600') center/cover;
+}
+
+/* Intro Section */
+.intro-rdv-section {
+  background-color: white;
+}
+
+.intro-rdv-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-rdv-content h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.intro-rdv-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* Motifs Section */
+.motifs-section {
+  background-color: var(--bg-gray);
+}
+
+.motifs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.motif-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.motif-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.motif-icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.motif-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.motif-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Form Section */
+.form-rdv-section {
+  background-color: white;
+}
+
+.rdv-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-gray);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.rdv-form-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+
+.rdv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-group label svg {
+  color: var(--primary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.rdv-form button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+/* Info Section */
+.info-rdv-section {
+  background-color: var(--bg-gray);
+}
+
+.info-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--primary-color);
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.info-box ul {
+  list-style: none;
+}
+
+.info-box li {
+  padding: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  color: var(--text-dark);
+  line-height: 1.6;
+  border-bottom: 1px solid #eee;
+}
+
+.info-box li:last-child {
+  border-bottom: none;
+}
+
+.info-box li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .motifs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .motif-icon {
+    font-size: 3rem;
+  }
+
+  .rdv-form-container {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .info-box {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .motifs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rdv-form-container h2 {
+    font-size: 1.5rem;
+  }
+}
